@@ -21,7 +21,7 @@ class App extends Component {
   render () {
     if (!this.state.loginedIn) {
       return <Login 
-        handleLogin={this.handleLogin} 
+        handleLogin={this.handleLogin}
       />
     } else {
       return <Home />
