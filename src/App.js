@@ -13,7 +13,9 @@ class App extends Component {
 
   //handlers
   handleLogin = () => {
-    this.state.loginedIn = true;
+    this.setState({
+      loginedIn: true
+    })
   }
 
   render () {
