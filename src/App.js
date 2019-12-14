@@ -11,9 +11,16 @@ class App extends Component {
     loginedIn: false
   }
 
+  //handlers
+  handleLogin = () => {
+    this.state.loginedIn = true;
+  }
+
   render () {
     if (!this.state.loginedIn) {
-      return <Login />
+      return <Login 
+        handleLogin={this.handleLogin} 
+      />
     } else {
       return <Home />
     }
