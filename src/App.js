@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Link } from 'react-router-dom';
 //Components
 import Login from'./components/Login/Login';
+import Home from './components/Home/Home';
 
 class App extends Component {
 
@@ -11,12 +12,11 @@ class App extends Component {
   }
 
   render () {
-    return (
-      <div>
-        <p>Home</p>
-        <Login />
-      </div>
-    )
+    if (!this.state.loginedIn) {
+      return <Login />
+    } else {
+      return <Home />
+    }
   }
 }
 
